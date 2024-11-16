@@ -3,19 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V Shape</title>
+    <title>V Shape mudel</title>
+    <style>
+        .scaleImg {
+          width: 35%;
+          max-width: max-content;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1></h1>
+        <h1>V Shape mudel</h1>
         <hr/>
         <div>
             <p>
-                
+                V-mudel on tarkvaraarendusprotsessi elutsükli mudel, kus protsesside 
+                liikumist saab visualiseerida V-kujulises diagrammis. Seda tuntakse ka nime all
+                "Verification (kontrolli) and Validation (kinnitamine) Model". Selle põhiomaduseks on 
+                see, et igale arendusetapile vastab samal tasemel testimisfaas ning iga uus etap algab alles 
+                eelmise etapi testimisfaasi lõppemist.
+            </p>
+            <p>
+                V-mudel sobib hästi väiksematesse ning keskmistesse projektidesse, kus nõuded ning vahendid on hästi ja selgelt defineeritud.
             </p>
         </div>
         <div>
-            <img src="">
+            <h3>Etapid</h3>
+            <h4>Kontrolli (verification) faasis:</h4>
+            <ol>
+                <li>
+                    Nõuete kogumine ja analüüs, kliendi soovide välja selgitamine, projekti ulatuse hindamine
+                </li>
+                <li>
+                    Süsteemi disainimise käigus analüüsitakse kogutud nõudeid ning luuakse plaan loodava süsteemi jaoks
+                </li>
+                <li>
+                    Projektis kasutatava arhitektuuri valimine olemasolevatest nõuetest ning süsteemi disainist lähtudes
+                </li>
+                <li>
+                    Süsteemi jagamine väikesteks mooduliteks, Low Level Design
+                </li>
+                <li>
+                    Tarkvara arendamine lähtuvalt eelnevatest disainitud algosadest
+                </li>
+            </ol>
+            <h4>Kinnitamise (validation) faasis:</h4>
+            <ol>
+                <li>
+                    Ühiktestimine moodulite loomise faasis nende individuaalse funktsioneerimise kinnitamiseks
+                </li>
+                <li>
+                    Integratsioontestimine arhitektuuri loomise faasis eesmärgiga veenduda, et loodud grupid töötavad omavahel ning ei tekita omavahel konflikte
+                </li>
+                <li>
+                    Süsteemi testimine süsteemi loomise faasis tarkvara funktsionaalsete ootuste kinnitamiseks
+                </li>
+                <li>
+                    Tarkvara testimine kliendipoolses süsteemis eesmärgiga leida kiirelt ühildumisprobleeme ning defekte reaalses kasutuskeskkonnas
+                </li>
+            </ol>
+        </div>
+        <div>
+            <img src="https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/1_v-model.png" class="scaleImg">
         </div>
         <br>
         <hr/>
@@ -27,16 +76,16 @@
                     <th>Cons</th>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>Lihtne aru saada</td>
+                    <td>Kõige mittepaindlikum mudel</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>Paljud testid sooritatakse enne reaalse koodi kirjutamist</td>
+                    <td>Ei sobi keerukatesse projektidesse</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td>Ajasäästlik</td>
+                    <td>Koodikirjutamise ajastuse tõttu ei looda projekti käigus algfaasis töötavaid prototüüpe</td>
                 </tr>
             </table>
         </div>
@@ -45,10 +94,10 @@
         <div>
             <h3>Viited</h3>
             <p>
-                <a href=""></a>
+                <a href="https://www.geeksforgeeks.org/software-engineering-sdlc-v-model/">GeeksForGeeks</a>
             </p>
             <p>
-                <a href=""></a>
+                <a href="https://www.javatpoint.com/software-engineering-v-model">Javatpoint</a>
             </p>
         </div>
     </div>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olemi-suhte diagramm ehk ERD</title>
+    <style>
+        .scaleImg {
+          width: 45%;
+          max-width: max-content;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Olemi-suhte diagramm ehk ERD</h1>
+    <hr/>
+    <div>
+        <h3>Definitsioon</h3>
+        <p>
+            Olemi-suhte diagrammid (ingl. k. ERD ehk Entity Relationsip Diagram) on kõige laiemalt levinud metoodika andmemudelite 
+            koostamiseks ja kirjelduste esitamiseks. Need näitavad andmebaaside loogilist struktuuri. Nendes kajastuvad suhted erinevate 
+            andmebaasiobjektide vahel vastavalt spetsiifilisele kontekstile. Need on olulised äriloogika protsesside kirjeldamiseks
+            ning on aluseks paljudele rakendustele.
+        </p>
+        <p>
+            Nendes on ühendatud:
+            <ul>
+                <li>Andmemudeli graaviline esitus - olemid (entity), vaated (views) ja nendevahelised seosed (relationships)</li>
+                <li>Tabelite sisemise struktuuri formaalsed kirjeldused (olemite artibuudid, atribuutide andmetüübid, piirangud, indeksid)</li>
+                <li>Vaadete formaalsed kirjeldused - kuidas vaated olemite kaudu kirjelduvad</li>
+                <li>Olemite ja vaadete vaheliste seoste formaalsed kirjaldused - seoste väljade kirjeldused, seoste tugevuse kirjeldused</li>
+                <li>Mudeli komponentide verbaalsed kirjeldused - olemite, atribuutide, seoste, protseduuride jm. semantika vabatekstiline kirjeldus</li>
+            </ul>
+        </p>    
+
+        </div>
+        <div>
+            <img src="https://www.researchgate.net/profile/Markus-Hofmann-4/publication/305222386/figure/fig1/AS:732739397509124@1551710094621/Entity-Relationship-Diagram-ERD-of-the-database.png" class="scaleImg">
+        </div>
+
+        <p>
+            Infoloogilistes mudelites koosneb ERD omavahel seostatud olemitest, mida tähistavad vaid ristküliku sisse kirjutatud olemite semantilised nimed:
+            <div>
+                <img src="elemendid.png">
+            </div>
+        </p>
+        <p>
+            Peale andmemudeli semantilise mudeli koostamist viiakse see andmeloogilisele tasemele. Andmeloogilise modelleerimise käigus projekteeritakse olemite sisemine struktuur, mis koosneb olemi omadustest ja mille väljenduseks ERD-mudelis on olemi atribuudid:
+            <div>
+                <img src="elemendid2.png">
+            </div>
+            Joonisel on näha, et kõikidele atribuutidele on lisatud andmetüübid, pikkused ja NULL/NOT NULL piirang, mis määrab, kas antud atribuut võib olla mõnes kirjes tühi (NULL) või mitte (NOT NULL).
+        </p>
+    </div>
+
+    <div>
+        <h3>Näited seostest olemite vahel</h3>
+        <p>
+            Enamus kasutatavatest seostest olemite vahel on "üks-mitmesed" seosed (üks-null, üks-mitu):
+            <div>
+                <img src="üksmitmene-seos.jpg">
+            </div>
+            Igal komponendil on selle suhte kujutise peal oma kindel tähendus:
+            <div>
+                <img src="tähendused.jpg">
+            </div>
+            Nendest komponentidest saab kokku panna mitmeid erinevaid kombinatsioone, millel on igaühel oma eri tähendus. Mõned näited levinud kombinatsioonidest:
+            <div>
+                <img src="seos1.jpg">
+            </div>
+            Skeemil on kirjeldatud inimene (inimesed), kellele kohta on teada igal juhul vähemalt üks aadress, aga tema kohta võib neid olla teada ka mitu.
+            <div>
+                <img src="seos2.jpg">
+            </div>
+            Skeemil on kirjeldatud inimene (inimesed), kes võib eksisteerida nii, et tema kohta pole teada ühtegi aadressi.
+            <div>
+                <img src="seos3.jpg">
+            </div>
+            Skeemil on kirjeldatud inimene (inimesed), kellele kohta on teada igal juhul vähemalt üks aadress, aga tema kohta võib neid olla teada ka mitu. On võimalik, et aadress eksisteerib iseseisvalt ilma, et ta oleks seostatud ühegi isikuga.
+            <div>
+                <img src="seos4.jpg">
+            </div>
+            Skeemil on kirjeldatud inimene (inimesed), kes võib eksisteerida nii, et tema kohta pole teada ühtegi aadressi. Me võime tema kohta siiski teada ühte või enamat aadressi. Aadress võib eksisteerida ka iseseisvalt ilma, et ta oleks seostatud isikuga.
+        </p>
+        <p>
+            Vahel võib ette tulla ka seoseid, mida ei ole olemas:
+            <div>
+                <img src="määratlemata.jpg">
+            </div>
+            Võidakse kasutada skeemi joonistamise väga varajases staadiumis tähistamaks seda, et kõik ei
+            ole veel lõpuni läbi mõeldud. Seose otsas “üks” puudub “kriips”, mis tähistab “ühte” ja seega on seos
+            määratlemata (olenemata sellest , mis on seose “mitmeses” otsas).
+            <div>
+                <img src="olematu.jpg">
+            </div>
+            Tegemist on seosega, mida kunagi ei eksisteeri, kuna tema otsas “üks” eksisteerib ainult variant, kus seos puudub.
+        </p>
+    </div>
+    <div>
+        <h3>Võtmed</h3>
+        <p>
+            Võtmetunnused on väärtused, mis identifitseerivad olemi üheselt ning mille abil on võimalik kindlaks teha, millise olemiga parasjagu tegu on.
+        </p>
+        <p>
+            <b>Primaarvõti</b> on minimaalne tunnuste kogum, mille abil olemit identifitseerida saab. Päriselu kontekstis oleks see näiteks isikukood Eesti riigi kodaniku puhul.
+        </p>
+        <p>Kui võti sisaldab ühte atribuuti, siis nimetatakse seda <b>lihtvõtmeks</b> (ingl. k. simple key).</p>
+        <p>Kui võti sisaldab mitu atribuuti, siis nimetatakse seda <b>liitvõtmeks </b> (ingl. k. composite key).
+        </p>
+        <p>
+            Seose loomisel kahe tabeli vahel toimub nii, et seose "üks" poolses otsas oleva olemi primaarvõtme väli kantakse üle suhte "mitu" poolsesse tabelisse. Näiteks  tabeli ISIK primaarvõti on olemas ka tabelis AADRESS, kuid <b>välisvõtmena</b> (FK - foreign key):
+            <div>
+                <img src="foreign.jpg">
+            </div>
+        </p>
+    </div>
+
+    <hr/>
+    <div>
+        <h3>Kasutatud allikad:</h3>
+        <p>
+            <a href="https://www.geeksforgeeks.org/introduction-of-er-model/">Introduction of ER Model - GeeksforGeeks</a>
+        </p>
+        <P>
+            <a href="https://enos.itcollege.ee/~priit/1.%20Andmebaasid/2.%20Loengumaterjalid/04.%20Andmemudelid%20ja%20ERD.pdf">
+                IT Kolledž - Andmemudelid ja ERD
+            </a>
+        </P>
+        <p>
+            <a href="https://web.htk.tlu.ee/digitaru/lisamoodulid/chapter/andmebaaside-loomise-protsess/">Andmebaaside loomise protsess - Lisamoodulid (Tallinna Ülikool)</a>
+        </p>
+        <p>
+            <a href="https://larjok.wordpress.com/2012/12/20/otsing-andmebaasides/">Otsing andmebaasides | larjok
+            </a>
+        </p>
+    </div>
+</body>
+</html>
